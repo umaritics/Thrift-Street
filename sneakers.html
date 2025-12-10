@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thrift Street | Sneakers</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page">
+    <header class="site-header glass">
+      <div class="logo">Thrift Street</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="sneakers.html" class="active">Sneakers</a>
+        <a href="jackets.html">Jackets</a>
+        <a href="fragrances.html">Fragrances</a>
+        <a href="cart.html" class="cart-link"
+          >Cart <span class="cart-badge" data-cart-count></span
+        ></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <p class="eyebrow">Sneakers</p>
+          <h1>Lightweight builds for daily motion.</h1>
+          <p class="muted">
+            Breathable uppers, cushioned midsoles, and grippy tread so you can
+            move from commute to cooldown without swapping pairs.
+          </p>
+        </div>
+        <div class="filters">
+          <span class="chip active">All day comfort</span>
+          <span class="chip">Neutral palettes</span>
+          <span class="chip">Reflective hits</span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <p class="eyebrow">Catalog</p>
+          <h2>Featured sneakers</h2>
+          <p class="muted">
+            Add to cart to hold your size — drops refresh every morning.
+          </p>
+        </div>
+        <div class="grid products" data-products="sneakers"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Thrift Street — Curated essentials, delivered.</p>
+      <div class="footer-links">
+        <a href="sneakers.html">Sneakers</a>
+        <a href="jackets.html">Jackets</a>
+        <a href="fragrances.html">Fragrances</a>
+        <a href="cart.html">Cart</a>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

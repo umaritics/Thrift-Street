@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thrift Street | Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page">
+    <header class="site-header glass">
+      <div class="logo">Thrift Street</div>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="sneakers.html">Sneakers</a>
+        <a href="jackets.html">Jackets</a>
+        <a href="fragrances.html">Fragrances</a>
+        <a href="cart.html" class="cart-link"
+          >Cart <span class="cart-badge" data-cart-count></span
+        ></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero gradient">
+        <div class="hero__content">
+          <p class="eyebrow">New Season · Limited Finds</p>
+          <h1>Curated sneakers, statement jackets, and signature scents.</h1>
+          <p class="lede">
+            Hand-picked drops with modern silhouettes and everyday comfort.
+            Discover fits that move with you.
+          </p>
+          <div class="hero__actions">
+            <a class="btn primary" href="sneakers.html">Shop sneakers</a>
+            <a class="btn ghost" href="jackets.html">View outerwear</a>
+          </div>
+        </div>
+        <div class="hero__panel glass">
+          <p class="tiny-title">This week</p>
+          <ul class="stack">
+            <li><span>Retro Runner</span><span>$120</span></li>
+            <li><span>Featherlite Parka</span><span>$180</span></li>
+            <li><span>Midnight Oud</span><span>$95</span></li>
+          </ul>
+          <a class="btn secondary block" href="fragrances.html"
+            >Explore scents</a
+          >
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <p class="eyebrow">Browse</p>
+          <h2>Shop by category</h2>
+          <p class="muted">Everything you need for a clean wardrobe refresh.</p>
+        </div>
+        <div class="grid categories">
+          <a class="category-card glass" href="sneakers.html">
+            <div class="pill">Fresh</div>
+            <h3>Sneakers</h3>
+            <p>Lightweight builds, breathable mesh, street-ready traction.</p>
+            <span class="link-arrow">Shop now →</span>
+          </a>
+          <a class="category-card glass" href="jackets.html">
+            <div class="pill">Cozy</div>
+            <h3>Jackets</h3>
+            <p>Layer-friendly shells, insulated parkas, refined silhouettes.</p>
+            <span class="link-arrow">Layer up →</span>
+          </a>
+          <a class="category-card glass" href="fragrances.html">
+            <div class="pill">Signature</div>
+            <h3>Fragrances</h3>
+            <p>Clean notes with character: woods, citrus, amber, spice.</p>
+            <span class="link-arrow">Find your scent →</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <p class="eyebrow">Featured</p>
+          <h2>Editor’s picks</h2>
+          <p class="muted">
+            Add to cart to save your size — limited runs restock daily.
+          </p>
+        </div>
+        <div class="grid products" data-products="featured"></div>
+      </section>
+
+      <section class="panel highlight">
+        <div>
+          <p class="eyebrow">Built to move</p>
+          <h2>Comfort-first design</h2>
+          <p class="muted">
+            Breathable textiles, responsive soles, water-repellent finishes, and
+            timeless palettes that stay in rotation.
+          </p>
+        </div>
+        <div class="callout glass">
+          <div class="pill soft">Drop alert</div>
+          <h3>Daily 10am refresh</h3>
+          <p class="muted">
+            Sizes are held for 15 minutes after adding to cart. Popular colors
+            rotate first.
+          </p>
+          <div class="callout-stats">
+            <div>
+              <p class="tiny-title">Today’s focus</p>
+              <strong>Retro Runner · Featherlite Parka</strong>
+            </div>
+            <div>
+              <p class="tiny-title">Stock pulse</p>
+              <span class="status-dot"></span> Live now
+            </div>
+          </div>
+          <div class="callout-actions">
+            <a class="btn primary block" href="sneakers.html">View drops</a>
+            <a class="btn ghost block" href="cart.html">Go to cart</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Thrift Street — Curated essentials, delivered.</p>
+      <div class="footer-links">
+        <a href="sneakers.html">Sneakers</a>
+        <a href="jackets.html">Jackets</a>
+        <a href="fragrances.html">Fragrances</a>
+        <a href="cart.html">Cart</a>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

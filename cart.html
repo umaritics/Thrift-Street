@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thrift Street | Cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page">
+    <header class="site-header glass">
+      <div class="logo">Thrift Street</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="sneakers.html">Sneakers</a>
+        <a href="jackets.html">Jackets</a>
+        <a href="fragrances.html">Fragrances</a>
+        <a href="cart.html" class="active cart-link"
+          >Cart <span class="cart-badge" data-cart-count></span
+        ></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <p class="eyebrow">Cart</p>
+          <h1>Your picks, saved.</h1>
+          <p class="muted">
+            Adjust quantities or remove items before checkout. Sizes are held
+            for a short time after adding to cart.
+          </p>
+        </div>
+        <div class="filters">
+          <span class="chip active">Secure checkout</span>
+          <span class="chip">Free returns</span>
+          <span class="chip">Ships in 24h</span>
+        </div>
+      </section>
+
+      <section class="cart">
+        <div class="cart-list" data-cart-list></div>
+        <div class="cart-summary" data-cart-summary></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Thrift Street — Curated essentials, delivered.</p>
+      <div class="footer-links">
+        <a href="sneakers.html">Sneakers</a>
+        <a href="jackets.html">Jackets</a>
+        <a href="fragrances.html">Fragrances</a>
+        <a href="cart.html">Cart</a>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
