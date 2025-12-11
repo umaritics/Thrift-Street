@@ -16,7 +16,16 @@
   --radius-lg: 28px;
   --g1: linear-gradient(135deg, #1d1f2b 0%, #0f101a 100%);
   --g2: linear-gradient(135deg, #6cf2b7, #7aa8ff);
-  --g3: radial-gradient(circle at 20% 20%, rgba(108, 242, 183, 0.12), transparent 35%), radial-gradient(circle at 80% 0%, rgba(122, 168, 255, 0.14), transparent 40%);
+  --g3: radial-gradient(
+      circle at 20% 20%,
+      rgba(108, 242, 183, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(122, 168, 255, 0.14),
+      transparent 40%
+    );
 }
 
 *,
@@ -27,7 +36,8 @@
 
 body {
   margin: 0;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
@@ -83,6 +93,7 @@ main {
   color: var(--muted);
   border: 1px solid transparent;
   transition: 0.2s ease;
+  white-space: nowrap; /* Prevent link text from breaking */
 }
 
 .nav a:hover {
@@ -158,7 +169,13 @@ main {
 }
 
 .gradient {
-  background: radial-gradient(120% 120% at 20% 20%, rgba(122, 168, 255, 0.18), transparent), radial-gradient(100% 100% at 80% 0%, rgba(108, 242, 183, 0.25), transparent), linear-gradient(135deg, #111323, #090a0f);
+  background: radial-gradient(
+      120% 120% at 20% 20%,
+      rgba(122, 168, 255, 0.18),
+      transparent
+    ),
+    radial-gradient(100% 100% at 80% 0%, rgba(108, 242, 183, 0.25), transparent),
+    linear-gradient(135deg, #111323, #090a0f);
 }
 
 .panel {
@@ -190,7 +207,16 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(80% 80% at 20% 20%, rgba(122, 168, 255, 0.18), transparent 45%), radial-gradient(90% 90% at 80% 0%, rgba(108, 242, 183, 0.2), transparent 50%);
+  background: radial-gradient(
+      80% 80% at 20% 20%,
+      rgba(122, 168, 255, 0.18),
+      transparent 45%
+    ),
+    radial-gradient(
+      90% 90% at 80% 0%,
+      rgba(108, 242, 183, 0.2),
+      transparent 50%
+    );
   pointer-events: none;
 }
 
@@ -424,6 +450,7 @@ main {
   justify-content: center;
   gap: 18px;
   margin-top: 10px;
+  flex-wrap: wrap; /* Added for mobile footer */
 }
 
 .page-hero {
@@ -445,6 +472,7 @@ main {
 .filters {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap; /* Essential for mobile chips */
 }
 
 .chip {
@@ -539,29 +567,76 @@ main {
   text-align: center;
 }
 
+/* --- RESPONSIVE UPDATES --- */
+
+/* Tablet and below */
 @media (max-width: 900px) {
   .hero,
   .highlight,
   .cart {
     grid-template-columns: 1fr;
   }
+}
 
+/* Mobile Devices */
+@media (max-width: 768px) {
+  /* Stack the Header */
+  .site-header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  /* Make Nav wrapper full width to handle scrolling */
   .nav {
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    width: 100%;
+    justify-content: space-between;
+    overflow-x: auto; /* Allows horizontal scrolling if screens are very narrow */
+    padding-bottom: 4px; /* Space for scrollbar if it appears */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav a {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  /* Page Hero (Fragrances, Jackets pages, etc) */
+  .page-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+
+  .page-hero h1 {
+    font-size: 28px;
+  }
+
+  .filters {
+    margin-top: 12px;
+  }
+
+  .chip {
+    font-size: 13px;
+    padding: 8px 12px;
   }
 }
 
+/* Small Phones */
 @media (max-width: 640px) {
   main {
     width: 94vw;
-    padding-top: 84px;
+    padding-top: 24px; /* Reduced top padding */
   }
 
   .hero,
-  .panel,
-  .page-hero {
-    padding: 24px;
+  .panel {
+    padding: 20px;
+    margin-top: 24px;
+  }
+
+  .hero__content h1 {
+    font-size: 28px;
   }
 
   .callout-stats,
@@ -569,17 +644,34 @@ main {
     grid-template-columns: 1fr;
   }
 
+  /* Cart Items on mobile: Stack image, text, and buttons */
   .cart-item {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Stack vertically */
     text-align: center;
+    gap: 12px;
   }
 
   .cart-item img {
-    justify-self: center;
+    justify-self: center; /* Center image */
+    width: 100px;
+    height: 100px;
+  }
+
+  .cart-item .product-meta {
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
   }
 
   .cart-actions {
     justify-content: center;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  /* Make footer links stack nicely */
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
   }
 }
-
